@@ -7,6 +7,40 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
+        <TabControl>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="UrlEncode" Height="21" Margin="-2,0,-2,0" VerticalAlignment="Bottom">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <TextBox TextWrapping="Wrap" Name="UrlInput" Grid.ColumnSpan="2"  Grid.RowSpan="2"/>
+                    <TextBox Grid.Row="1"  Name="UrlOutput" TextWrapping="Wrap" Grid.ColumnSpan="2"/>
+                    <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="0,174,0,0" Grid.RowSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="6*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Content="编码" Name="encode" Grid.Column="1" HorizontalAlignment="Stretch" Click="encode_Click_1"/>
+                        <Button Content="解码" Name ="decode"  Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="decode_Click_2"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>
